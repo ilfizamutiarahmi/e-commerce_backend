@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $response['message'] = "Connection failed: " . $koneksi->connect_error;
         } else {
             // Query untuk mendapatkan data pesanan
-            $sql = "SELECT produk.nama_produk, pesanan.jumlah, produk.harga, pesanan.total_bayar, alamat_pengiriman.nama,
+            $sql = "SELECT produk.nama_produk, pesanan.jumlah, produk.harga, pesanan.total_bayar, pesanan.status, alamat_pengiriman.nama,
                     alamat_pengiriman.no_hp, alamat_pengiriman.alamat, alamat_pengiriman.kode_pos
                     FROM pesanan 
                     JOIN produk ON pesanan.id_produk = produk.id_produk 
@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             'jumlah' => $row['jumlah'],
                             'harga' => $row['harga'],
                             'total_bayar' => $row['total_bayar'],
+                            'status' => $row['status']
                         );
                         array_push($response['data'], $data);
                     }
