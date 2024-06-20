@@ -1,0 +1,829 @@
+{
+	"info": {
+		"_postman_id": "30aa4a1a-89d4-4200-b9f9-bbdd2ad71cfe",
+		"name": "e-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36349865"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "tiaa",
+							"type": "text"
+						},
+						{
+							"key": "fullname",
+							"value": "ilfizaaa",
+							"type": "text"
+						},
+						{
+							"key": "jenis_kelamin",
+							"value": "perempuan",
+							"type": "text"
+						},
+						{
+							"key": "no_hp",
+							"value": "083562572",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl binatu 2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ilfiza.mutiarahmi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "costumer",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.191.3/e-commerce/register.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"register.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "tiaa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.191.3/e-commerce/login.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_user",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.5/e-commerce/getUser.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"getUser.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "fizaa",
+							"type": "text"
+						},
+						{
+							"key": "fullname",
+							"value": "ilfizaaa",
+							"type": "text"
+						},
+						{
+							"key": "no_hp",
+							"value": "083562572",
+							"type": "text"
+						},
+						{
+							"key": "jenis_kelamin",
+							"value": "perempuan",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl binatu 2",
+							"type": "text"
+						},
+						{
+							"key": "id_user",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mutiaa@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.5/e-commerce/editUser.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"editUser.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list Kategori",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.5/e-commerce/kategori.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"kategori.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "produk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.5/e-commerce/produk.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"produk.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Keranjang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_user",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_produk",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "jumlah",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.5/e-commerce/addKeranjang.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"addKeranjang.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list keranjang",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.5/e-commerce/listKeranjang.php?id_user=1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"listKeranjang.php"
+					],
+					"query": [
+						{
+							"key": "id_user",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addFavourite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_user",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "id_produk",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.1.5/e-commerce/addFavourite.php",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"addFavourite.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "favourite",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.5/e-commerce/favourite.php?id_user=5",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"favourite.php"
+					],
+					"query": [
+						{
+							"key": "id_user",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDeliveryAddress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_user",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "dilaa",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl. sudirman, kota padang Sumatra Barat",
+							"type": "text"
+						},
+						{
+							"key": "no_hp",
+							"value": "08561728293",
+							"type": "text"
+						},
+						{
+							"key": "kode_pos",
+							"value": "53537",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.1.5/e-commerce/addDeliveryAddress.php",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"addDeliveryAddress.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deliveryAddress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.1.5/e-commerce/deliveryAddress.php?id_user=5",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"5"
+					],
+					"path": [
+						"e-commerce",
+						"deliveryAddress.php"
+					],
+					"query": [
+						{
+							"key": "id_user",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_user",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_alamat",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_produk",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "jumlah",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "metode_pembayaran",
+							"value": "cash",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/addOrder.php",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"addOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Delivery Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_alamat",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/deleteDeliveryAddress.php",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"deleteDeliveryAddress.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Favourite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_favourite",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/deleteFavourite.php",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"deleteFavourite.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Keranjang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_keranjang",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/deleteKeranjang.php",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"deleteKeranjang.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Pengiriman",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama",
+							"value": "dila",
+							"type": "text"
+						},
+						{
+							"key": "no_hp",
+							"value": "08364832",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl. sutomo no 4 kota padang",
+							"type": "text"
+						},
+						{
+							"key": "kode_pos",
+							"value": "738794",
+							"type": "text"
+						},
+						{
+							"key": "id_user",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "id_alamat",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/editPengiriman.php",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"editPengiriman.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/order.php?id_user=2",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"order.php"
+					],
+					"query": [
+						{
+							"key": "id_user",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produk by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/produkByKategori.php?id_kategori=2",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"produkByKategori.php"
+					],
+					"query": [
+						{
+							"key": "id_kategori",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list Order by pesanan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.191.3/e-commerce/order.php?id_user=2&status=pesanan dikemas",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"order.php"
+					],
+					"query": [
+						{
+							"key": "id_user",
+							"value": "2"
+						},
+						{
+							"key": "status",
+							"value": "pesanan dikemas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send verifikasi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ilfiza.mutiarahmi@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.191.3/e-commerce/send_verifikasi.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"send_verifikasi.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verifikasi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ilfiza.mutiarahmi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "verified_code",
+							"value": "3159",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.191.3/e-commerce/verified_code.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"191",
+						"3"
+					],
+					"path": [
+						"e-commerce",
+						"verified_code.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
