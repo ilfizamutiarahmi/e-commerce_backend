@@ -6,12 +6,12 @@ include 'koneksi.php';
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     $response = array();
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = md5($_POST['password']);
 
-    $cek = "SELECT * FROM user WHERE username = ? AND password = ? AND verified_code IS NOT NULL AND is_verified = 'verified'";
+    $cek = "SELECT * FROM user WHERE email = ? AND password = ? AND verified_code IS NOT NULL AND is_verified = 'verified'";
     $stmt = mysqli_prepare($koneksi, $cek);
-    mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+    mysqli_stmt_bind_param($stmt, "ss", $email, $password);
     
     // Execute statement
     mysqli_stmt_execute($stmt);

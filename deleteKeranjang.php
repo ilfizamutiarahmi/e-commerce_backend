@@ -6,10 +6,11 @@ include 'koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Pastikan bahwa parameter id tersedia
-    if (isset($_POST['id_keranjang'])) {
+    if (isset($_POST['id_keranjang']) && isset($_POST['id_user'])) {
         $id_keranjang = $_POST['id_keranjang'];
+	$id_user = $_POST['id_user'];
 
-        $sql = "DELETE FROM keranjang WHERE id_keranjang='$id_keranjang'";
+        $sql = "DELETE FROM keranjang WHERE id_keranjang='$id_keranjang' AND id_user='$id_user'";
         if ($koneksi->query($sql) === TRUE) {
             $response['isSuccess'] = true;
             $response['message'] = "Berhasil menghapus data Keranjang";

@@ -6,10 +6,11 @@ include 'koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Pastikan bahwa parameter id tersedia
-    if (isset($_POST['id_favourite'])) {
+    if (isset($_POST['id_favourite']) && isset($_POST['id_user'])) {
         $id_favourite = $_POST['id_favourite'];
+	$id_user = $_POST['id_user'];
 
-        $sql = "DELETE FROM favourite WHERE id_favourite='$id_favourite'";
+        $sql = "DELETE FROM favourite WHERE id_favourite='$id_favourite' AND id_user='$id_user'";
         if ($koneksi->query($sql) === TRUE) {
             $response['isSuccess'] = true;
             $response['message'] = "Berhasil menghapus data Favourite";
